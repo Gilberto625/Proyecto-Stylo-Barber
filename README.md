@@ -2,7 +2,7 @@
 
 **Sistema Integral de Gestión para Barbería**
 
-Stylo Barber Connect es una plataforma web y móvil diseñada para optimizar las operaciones de una barbería moderna, permitiendo la gestión completa de citas, productos, ventas, inventario, notificaciones, entregas, reportes, empleados y más. Este proyecto busca digitalizar los procesos tradicionales y mejorar la eficiencia, experiencia del cliente y rentabilidad del negocio.
+Stylo Barber Connect es una plataforma profesional diseñada para digitalizar la operación completa de una barbería. Facilita la gestión de citas, inventario, ventas, empleados, notificaciones y reportes mediante aplicaciones Web, Móvil y una API robusta.
 
 ---
 
@@ -11,179 +11,137 @@ Stylo Barber Connect es una plataforma web y móvil diseñada para optimizar las
 * [Descripción General](#-descripción-general)
 * [Objetivo del Proyecto](#-objetivo-del-proyecto)
 * [Alcance](#-alcance)
+* [Tecnologías Utilizadas](#-tecnologías-utilizadas)
 * [Tipos de Usuario](#-tipos-de-usuario)
 * [Módulos del Sistema](#-módulos-del-sistema)
 * [Requerimientos Funcionales](#-requerimientos-funcionales)
 * [Requerimientos No Funcionales](#-requerimientos-no-funcionales)
 * [Requerimientos Técnicos](#-requerimientos-técnicos)
-* [Cronograma General](#-cronograma-general)
+* [Autores](#-autores)
 
 ---
 
 ## 🧾 Descripción General
 
-Stylo Barber Connect es un sistema multiplataforma (web + móvil) que permite gestionar:
+Stylo Barber Connect es un sistema que integra:
 
-* Citas y agenda inteligente
-* Catálogo de servicios
-* Catálogo e inventario de productos
-* Procesamiento de ventas y pagos
-* Apartados
-* Envíos y entregas
+* Plataforma web para administración y secretaria
+* Aplicación móvil para clientes (Android y iOS)
+* Backend centralizado y seguro
 * Notificaciones automáticas
-* Gestión de empleados y roles
-* Métricas y reportes avanzados
-* Políticas de negocio
-* Soporte y ayuda
+* Integración con pagos y procesos inteligentes
+* Gestión de productos, servicios, ventas y agenda
 
-Su diseño permite optimizar la operación diaria, reducir errores humanos, mejorar el flujo de trabajo y aumentar la satisfacción del cliente mediante recordatorios, anticipos y disponibilidad en tiempo real.
+El objetivo es modernizar la operación de una barbería, mejorar el control interno y brindar una experiencia óptima al cliente.
 
 ---
 
 ## 🎯 Objetivo del Proyecto
 
-* Crear un sistema integral para digitalizar la operación completa de una barbería.
-* Permitir que clientes agenden citas en línea con disponibilidad inteligente.
-* Controlar ventas y productos tanto en línea como presencial.
-* Automatizar notificaciones, recordatorios y procesos de pago.
-* Proveer reportes estratégicos para la toma de decisiones.
-* Garantizar seguridad, rapidez y facilidad de uso.
+* Automatizar los procesos operativos de una barbería.
+* Proveer una agenda inteligente con disponibilidad en tiempo real.
+* Permitir ventas y apartados tanto en línea como presencial.
+* Generar reportes estratégicos para decisiones de negocio.
+* Ofrecer acceso multiplataforma (web + móvil).
+* Mejorar la satisfacción del cliente mediante recordatorios automáticos.
+
+---
+
+## 🌐 Tecnologías Utilizadas
+
+### 🖥️ **Backend – Django (Python)**
+
+* Django REST Framework
+* JWT / OAuth2
+* Seguridad y validaciones internas
+* ORM para base de datos
+* Webhooks para pagos
+
+### 🌍 **Frontend Web – Angular**
+
+* Panel de administrador
+* Panel de secretaria
+* Gestión del sistema en tiempo real
+* Tableros e interfaces reactivas
+* Integración con el backend vía API REST
+
+### 📱 **Aplicación Móvil – Flutter (Android & iOS)**
+
+* App para clientes
+* Agendamiento de citas
+* Carrito de compra
+* Pagos y apartados
+* Notificaciones push
+* UI moderna y fluida
+
+### 🗄️ **Base de Datos – MongoDB Atlas**
 
 ---
 
 ## 📌 Alcance
 
-Esta solución está diseñada para funcionar en:
+La plataforma es compatible con:
 
 * Navegadores web modernos
-* Aplicación móvil Android/iOS
-* Equipos de escritorio (admin/secretaria)
+* Dispositivos Android
+* Dispositivos iOS
+* Sistemas de escritorio
 
-Incluye backend, frontend web, aplicaciones móviles y base de datos centralizada.
+Incluye backend, web app, mobile app, dashboards y base de datos en la nube.
 
 ---
 
 ## 👥 Tipos de Usuario
 
-### **1. Administrador**
+### **Administrador**
 
-Control total del sistema: empleados, reportes, inventario, políticas, servicios y productos.
+Control total del sistema (servicios, productos, empleados, políticas, reportes, etc.).
 
-### **2. Secretaria**
+### **Secretaria**
 
-Gestión diaria de citas, agenda, inventario, ventas presenciales, pagos y validaciones.
+Gestión diaria de citas, agenda, pagos, inventario y ventas.
 
-### **3. Barbero / Colaborador**
+### **Barbero**
 
-Actualiza tiempos de servicio, visualiza su agenda, recibe notificaciones de citas.
+Actualiza tiempos de servicio, visualiza su agenda y recibe notificaciones.
 
-### **4. Cliente**
+### **Cliente**
 
-Agendar citas, comprar productos, recibir notificaciones, ver historial, apartados y pagos.
+Puede agendar citas, comprar productos, pagar anticipos, recibir notificaciones, etc.
 
 ---
 
 ## 🧩 Módulos del Sistema
 
-### 🔐 Autenticación
+Incluye sistemas completos como:
 
-* Registro
-* Inicio de sesión
-* Login con Google y Facebook
-* Recuperación de contraseña
-* 2FA
-* Bloqueo por intentos fallidos
+* Autenticación
+* Gestión de perfiles
+* Agenda y citas inteligentes
+* Servicios y catálogo
+* Productos e inventario
+* Ventas y pagos
+* Envíos y entregas
+* Notificaciones (email, push, SMS)
+* Gestión de empleados
+* Reportes y métricas
+* Políticas y configuración
+* Soporte y tickets
 
-### 👤 Perfiles
-
-* Actualización de datos
-* Foto de perfil
-* Preferencias
-* Eliminación de cuenta
-
-### 📅 Gestión de Citas
-
-* Agendar con disponibilidad inteligente
-* Reprogramación
-* Cancelación
-* Check-in
-* Agenda diaria/semana/mes
-
-### 💇 Servicios
-
-* Creación / edición / eliminación
-* Catálogo visible para clientes
-* Duración configurable
-
-### 🛒 Productos e Inventario
-
-* Catálogo
-* Stock
-* Entradas/salidas
-* Alertas
-* Apartados con anticipo
-
-### 💳 Pagos y Ventas
-
-* Venta en línea
-* Venta presencial
-* Anticipos
-* Integración con Mercado Pago
-* Transferencias con validación
-
-### 🚚 Envíos y Entregas
-
-* Recoger en local
-* Moto mandado
-* Envíos nacionales (futuro)
-
-### 📢 Notificaciones
-
-* Email
-* SMS / WhatsApp
-* Push
-* Recordatorios automáticos
-
-### 🧑‍🏫 Empleados y Roles
-
-* Registro
-* Especialidades
-* Permisos
-* Horarios de trabajo
-
-### 📊 Reportes y Métricas
-
-* Ventas
-* Servicios más solicitados
-* Productos más vendidos
-* Días de alta demanda
-
-### ⚙️ Configuración y Políticas
-
-* Horarios
-* Festivos
-* Anticipos
-* Cancelaciones
-* Promociones
-
-### 🆘 Soporte
-
-* FAQ
-* Tickets
-* Chat de soporte
+Cada módulo incluye validaciones, reglas de negocio, auditoría y procesos automáticos.
 
 ---
 
-## ✅ Requerimientos Funcionales (resumen)
+## 🧪 Requerimientos Funcionales
 
-El sistema cuenta con **170 procedimientos**, organizados en:
+El proyecto cuenta con más de **170 procedimientos funcionales**, distribuidos en:
 
 * Autenticación (12)
 * Perfiles (10)
 * Citas (20)
 * Servicios (12)
-* Productos e inventario (15)
-* Ventas y pagos (15)
+* Inventario (15)
+* Ventas/pagos (15)
 * Envíos (10)
 * Notificaciones (14)
 * Empleados (12)
@@ -191,20 +149,19 @@ El sistema cuenta con **170 procedimientos**, organizados en:
 * Configuración (12)
 * Soporte (9)
 
-Cada uno especifica entradas, procesos, reglas y salidas.
+Cada requerimiento especifica entradas, procesos, salidas y reglas de negocio.
 
 ---
 
 ## ⚡ Requerimientos No Funcionales
 
-* Sistema rápido (<2 segundos por operación crítica)
-* Seguridad de contraseñas con bcrypt
-* Tokens JWT
-* Expiración y validación de enlaces
-* Auditoría completa
-* Escalabilidad y concurrencia
-* API segura con HTTPS
-* Validaciones en tiempo real
+* Alta disponibilidad
+* Respuesta rápida < 2s por operación
+* Tokens JWT y contraseñas hash
+* Seguridad con HTTPS
+* Auditoría completa de cambios
+* Sistema escalable para múltiples usuarios
+* Actualizaciones en tiempo real (sockets o polling)
 
 ---
 
@@ -212,29 +169,18 @@ Cada uno especifica entradas, procesos, reglas y salidas.
 
 ### Software
 
-* Backend: Node.js / Express
-* Base de datos: MongoDB Atlas
-* Frontend web: React
-* Aplicación móvil: React Native (Expo)
-* Integraciones:
+* **Backend:** Django + Django REST Framework
+* **Frontend Web:** Angular
+* **Aplicación Móvil:** Flutter
+* **Base de Datos:** MongoDB Atlas
+* **Notificaciones:** Firebase Cloud Messaging
+* **Pagos:** Mercado Pago, tarjetas, transferencia
 
-  * Mercado Pago
-  * Servicios de correo
-  * Notificaciones push
+### Hardware recomendado
 
-### Hardware (mínimo en barbería)
-
-* PC o laptop
-* Smartphone Android/iOS
-* Conexión a internet estable
-
----
-
-## 📅 Cronograma General
-
-(El cronograma detallado se genera por semanas desde septiembre 2025.)
-
-Incluye etapas de análisis, diseño, desarrollo, pruebas, integración, documentación y entrega.
+* Laptop/PC para administración
+* Smartphones Android o iOS para clientes
+* Conexión estable a internet
 
 ---
 
